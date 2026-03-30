@@ -1,0 +1,4 @@
+idf_component_register(
+    SRCS "sensor_read.c"
+    INCLUDE_DIRS "."
+)

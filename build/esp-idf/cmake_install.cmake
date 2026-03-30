@@ -712,6 +712,21 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/main/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/adc_monitor/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/lcd_handle/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/sensor_read/cmake_install.cmake")
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)

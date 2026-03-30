@@ -1,0 +1,224 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\energy-meter.elf C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 17:01:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=084a8h ( 33960) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=000184d0 vaddr=3ffb0000 size=029fch ( 10748) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001aed4 vaddr=40080000 size=05144h ( 20804) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0bf04h ( 48900) map[0m
+[0;32mI (129) esp_image: segment 4: paddr=0002bf2c vaddr=40085144 size=059ech ( 23020) load[0m
+[0;32mI (139) esp_image: segment 5: paddr=00031920 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Multicore app[0m
+[0;32mI (165) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     energy-meter[0m
+[0;32mI (176) app_init: App version:      1[0m
+[0;32mI (179) app_init: Compile time:     Mar 30 2026 17:00:28[0m
+[0;32mI (184) app_init: ELF file SHA256:  88edec012...[0m
+[0;32mI (188) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (196) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (200) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (204) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (215) heap_init: At 3FFB33A0 len 0002CC60 (179 KiB): DRAM[0m
+[0;32mI (220) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (226) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (231) heap_init: At 4008AB30 len 000154D0 (85 KiB): IRAM[0m
+[0;33mW (238) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (250) spi_flash: detected chip: generic[0m
+[0;32mI (253) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+[0;32mI (280) energy-meter: === Smart Energy Monitor Starting ===[0m
+[0;32mI (280) energy-meter: Initialized System Successfully[0m
+[0;32mI (280) energy-meter: Energy Meter is running...[0m
+[0;32mI (1280) energy-meter: Energy Meter is running...[0m
+[0;32mI (2280) energy-meter: Energy Meter is running...[0m
+[0;32mI (3280) energy-meter: Energy Meter is running...[0m
+[0;32mI (4280) energy-meter: Energy Meter is running...[0m
+[0;32mI (5280) energy-meter: Energy Meter is running...[0m
+[0;32mI (6280) energy-meter: Energy Meter is running...[0m
+[0;32mI (7280) energy-meter: Energy Meter is running...[0m
+[0;32mI (8280) energy-meter: Energy Meter is running...[0m
+[0;32mI (9280) energy-meter: Energy Meter is running...[0m
+[0;32mI (10280) energy-meter: Energy Meter is running...[0m
+[0;32mI (11280) energy-meter: Energy Meter is running...[0m
+[0;32mI (12280) energy-meter: Energy Meter is running...[0m
+[0;32mI (13280) energy-meter: Energy Meter is running...[0m
+[0;32mI (14280) energy-meter: Energy Meter is running...[0m
+[0;32mI (15280) energy-meter: Energy Meter is running...[0m
+[0;32mI (16280) energy-meter: Energy Meter is running...[0m
+[0;32mI (17280) energy-meter: Energy Meter is running...[0m
+[0;32mI (18280) energy-meter: Energy Meter is running...[0m
+[0;32mI (19280) energy-meter: Energy Meter is running...[0m
+[0;32mI (20280) energy-meter: Energy Meter is running...[0m
+[0;32mI (21280) energy-meter: Energy Meter is running...[0m
+[0;32mI (22280) energy-meter: Energy Meter is running...[0m
+[0;32mI (23280) energy-meter: Energy Meter is running...[0m
+[0;32mI (24280) energy-meter: Energy Meter is running...[0m
+[0;32mI (25280) energy-meter: Energy Meter is running...[0m
+[0;32mI (26280) energy-meter: Energy Meter is running...[0m
+[0;32mI (27280) energy-meter: Energy Meter is running...[0m
+[0;32mI (28280) energy-meter: Energy Meter is running...[0m
+[0;32mI (29280) energy-meter: Energy Meter is running...[0m
+[0;32mI (30280) energy-meter: Energy Meter is running...[0m
+[0;32mI (31280) energy-meter: Energy Meter is running...[0m
+[0;32mI (32280) energy-meter: Energy Meter is running...[0m
+[0;32mI (33280) energy-meter: Energy Meter is running...[0m
+[0;32mI (34280) energy-meter: Energy Meter is running...[0m
+[0;32mI (35280) energy-meter: Energy Meter is running...[0m
+[0;32mI (36280) energy-meter: Energy Meter is running...[0m
+[0;32mI (37280) energy-meter: Energy Meter is running...[0m
+[0;32mI (38280) energy-meter: Energy Meter is running...[0m
+[0;32mI (39280) energy-meter: Energy Meter is running...[0m
+[0;32mI (40280) energy-meter: Energy Meter is running...[0m
+[0;32mI (41280) energy-meter: Energy Meter is running...[0m
+[0;32mI (42280) energy-meter: Energy Meter is running...[0m
+[0;32mI (43280) energy-meter: Energy Meter is running...[0m
+[0;32mI (44280) energy-meter: Energy Meter is running...[0m
+[0;32mI (45280) energy-meter: Energy Meter is running...[0m
+[0;32mI (46280) energy-meter: Energy Meter is running...[0m
+[0;32mI (47280) energy-meter: Energy Meter is running...[0m
+[0;32mI (48280) energy-meter: Energy Meter is running...[0m
+[0;32mI (49280) energy-meter: Energy Meter is running...[0m
+[0;32mI (50280) energy-meter: Energy Meter is running...[0m
+[0;32mI (51280) energy-meter: Energy Meter is running...[0m
+[0;32mI (52280) energy-meter: Energy Meter is running...[0m
+[0;32mI (53280) energy-meter: Energy Meter is running...[0m
+[0;32mI (54280) energy-meter: Energy Meter is running...[0m
+[0;32mI (55280) energy-meter: Energy Meter is running...[0m
+[0;32mI (56280) energy-meter: Energy Meter is running...[0m
+[0;32mI (57280) energy-meter: Energy Meter is running...[0m
+[0;32mI (58280) energy-meter: Energy Meter is running...[0m
+[0;32mI (59280) energy-meter: Energy Meter is running...[0m
+[0;32mI (60280) energy-meter: Energy Meter is running...[0m
+[0;32mI (61280) energy-meter: Energy Meter is running...[0m
+[0;32mI (62280) energy-meter: Energy Meter is running...[0m
+[0;32mI (63280) energy-meter: Energy Meter is running...[0m
+[0;32mI (64280) energy-meter: Energy Meter is running...[0m
+[0;32mI (65280) energy-meter: Energy Meter is running...[0m
+[0;32mI (66280) energy-meter: Energy Meter is running...[0m
+[0;32mI (67280) energy-meter: Energy Meter is running...[0m
+[0;32mI (68280) energy-meter: Energy Meter is running...[0m
+[0;32mI (69280) energy-meter: Energy Meter is running...[0m
+[0;32mI (70280) energy-meter: Energy Meter is running...[0m
+[0;32mI (71280) energy-meter: Energy Meter is running...[0m
+[0;32mI (72280) energy-meter: Energy Meter is running...[0m
+[0;32mI (73280) energy-meter: Energy Meter is running...[0m
+[0;32mI (74280) energy-meter: Energy Meter is running...[0m
+[0;32mI (75280) energy-meter: Energy Meter is running...[0m
+[0;32mI (76280) energy-meter: Energy Meter is running...[0m
+[0;32mI (77280) energy-meter: Energy Meter is running...[0m
+[0;32mI (78280) energy-meter: Energy Meter is running...[0m
+[0;32mI (79280) energy-meter: Energy Meter is running...[0m
+[0;32mI (80280) energy-meter: Energy Meter is running...[0m
+[0;32mI (81280) energy-meter: Energy Meter is running...[0m
+[0;32mI (82280) energy-meter: Energy Meter is running...[0m
+[0;32mI (83280) energy-meter: Energy Meter is running...[0m
+[0;32mI (84280) energy-meter: Energy Meter is running...[0m
+[0;32mI (85280) energy-meter: Energy Meter is running...[0m
+[0;32mI (86280) energy-meter: Energy Meter is running...[0m
+[0;32mI (87280) energy-meter: Energy Meter is running...[0m
+[0;32mI (88280) energy-meter: Energy Meter is running...[0m
+[0;32mI (89280) energy-meter: Energy Meter is running...[0m
+[0;32mI (90280) energy-meter: Energy Meter is running...[0m
+[0;32mI (91280) energy-meter: Energy Meter is running...[0m
+[0;32mI (92280) energy-meter: Energy Meter is running...[0m
+[0;32mI (93280) energy-meter: Energy Meter is running...[0m
+[0;32mI (94280) energy-meter: Energy Meter is running...[0m
+[0;32mI (95280) energy-meter: Energy Meter is running...[0m
+[0;32mI (96280) energy-meter: Energy Meter is running...[0m
+[0;32mI (97280) energy-meter: Energy Meter is running...[0m
+[0;32mI (98280) energy-meter: Energy Meter is running...[0m
+[0;32mI (99280) energy-meter: Energy Meter is running...[0m
+[0;32mI (100280) energy-meter: Energy Meter is running...[0m
+[0;32mI (101280) energy-meter: Energy Meter is running...[0m
+[0;32mI (102280) energy-meter: Energy Meter is running...[0m
+[0;32mI (103280) energy-meter: Energy Meter is running...[0m
+[0;32mI (104280) energy-meter: Energy Meter is running...[0m
+[0;32mI (105280) energy-meter: Energy Meter is running...[0m
+[0;32mI (106280) energy-meter: Energy Meter is running...[0m
+[0;32mI (107280) energy-meter: Energy Meter is running...[0m
+[0;32mI (108280) energy-meter: Energy Meter is running...[0m
+[0;32mI (109280) energy-meter: Energy Meter is running...[0m
+[0;32mI (110280) energy-meter: Energy Meter is running...[0m
+[0;32mI (111280) energy-meter: Energy Meter is running...[0m
+[0;32mI (112280) energy-meter: Energy Meter is running...[0m
+[0;32mI (113280) energy-meter: Energy Meter is running...[0m
+[0;32mI (114280) energy-meter: Energy Meter is running...[0m
+[0;32mI (115280) energy-meter: Energy Meter is running...[0m
+[0;32mI (116280) energy-meter: Energy Meter is running...[0m
+[0;32mI (117280) energy-meter: Energy Meter is running...[0m
+[0;32mI (118280) energy-meter: Energy Meter is running...[0m
+[0;32mI (119280) energy-meter: Energy Meter is running...[0m
+[0;32mI (120280) energy-meter: Energy Meter is running...[0m
+[0;32mI (121280) energy-meter: Energy Meter is running...[0m
+[0;32mI (122280) energy-meter: Energy Meter is running...[0m
+[0;32mI (123280) energy-meter: Energy Meter is running...[0m
+[0;32mI (124280) energy-meter: Energy Meter is running...[0m
+[0;32mI (125280) energy-meter: Energy Meter is running...[0m
+[0;32mI (126280) energy-meter: Energy Meter is running...[0m
+[0;32mI (127280) energy-meter: Energy Meter is running...[0m
+[0;32mI (128280) energy-meter: Energy Meter is running...[0m
+[0;32mI (129280) energy-meter: Energy Meter is running...[0m
+[0;32mI (130280) energy-meter: Energy Meter is running...[0m
+[0;32mI (131280) energy-meter: Energy Meter is running...[0m
+[0;32mI (132280) energy-meter: Energy Meter is running...[0m
+[0;32mI (133280) energy-meter: Energy Meter is running...[0m
+[0;32mI (134280) energy-meter: Energy Meter is running...[0m
+[0;32mI (135280) energy-meter: Energy Meter is running...[0m
+[0;32mI (136280) energy-meter: Energy Meter is running...[0m
+[0;32mI (137280) energy-meter: Energy Meter is running...[0m
+[0;32mI (138280) energy-meter: Energy Meter is running...[0m
+[0;32mI (139280) energy-meter: Energy Meter is running...[0m
+[0;32mI (140280) energy-meter: Energy Meter is running...[0m
+[0;32mI (141280) energy-meter: Energy Meter is running...[0m
+[0;32mI (142280) energy-meter: Energy Meter is running...[0m
+[0;32mI (143280) energy-meter: Energy Meter is running...[0m
+[0;32mI (144280) energy-meter: Energy Meter is running...[0m
+[0;32mI (145280) energy-meter: Energy Meter is running...[0m
+[0;32mI (146280) energy-meter: Energy Meter is running...[0m
+[0;32mI (147280) energy-meter: Energy Meter is running...[0m
+[0;32mI (148280) energy-meter: Energy Meter is running...[0m
+[0;32mI (149280) energy-meter: Energy Meter is running...[0m
+[0;32mI (150280) energy-meter: Energy Meter is running...[0m
+[0;32mI (151280) energy-meter: Energy Meter is running...[0m
+[0;32mI (152280) energy-meter: Energy Meter is running...[0m
+[0;32mI (153280) energy-meter: Energy Meter is running...[0m
+[0;32mI (154280) energy-meter: Energy Meter is running...[0m
+[0;32mI (155280) energy-meter: Energy Meter is running...[0m
+[0;32mI (156280) energy-meter: Energy Meter is running...[0m
+[0;32mI (157280) energy-meter: Energy Meter is running...[0m
+[0;32mI (158280) energy-meter: Energy Meter is running...[0m
+[0;32mI (159280) energy-meter: Energy Meter is running...[0m
+[0;32mI (160280) energy-meter: Energy Meter is running...[0m
+[0;32mI (161280) energy-meter: Energy Meter is running...[0m
+[0;32mI (162280) energy-meter: Energy Meter is running...[0m
+[0;32mI (163280) energy-meter: Energy Meter is running...[0m

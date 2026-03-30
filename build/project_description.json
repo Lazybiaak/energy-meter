@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "energy-meter",
-    "project_version":    "41c069d-dirty",
+    "project_version":    "625cac1-dirty",
     "project_path":       "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter",
     "idf_path":           "C:/esp/v6.0/esp-idf",
     "build_dir":          "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build",

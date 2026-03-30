@@ -1,0 +1,2 @@
+Command: ninja all
+ninja: error: 'C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/main/adc_monitor.c', needed by 'esp-idf/main/CMakeFiles/__idf_main.dir/adc_monitor.c.obj', missing and no known rule to make it

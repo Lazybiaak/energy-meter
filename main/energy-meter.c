@@ -17,7 +17,7 @@ void app_main(void) {
     
     while (1) {
         adc_sample_t sample = adc_read_sample();
-        ESP_LOGI(TAG, "Raw: %4lu | Voltage: %.2f mV",
+        printf("Raw: %4lu | Voltage: %.2f mV\n",
                  sample.raw_adc, sample.voltage_mv);
         
         vTaskDelay(pdMS_TO_TICKS(1000));  // Read once per second

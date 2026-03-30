@@ -1,0 +1,167 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\energy-meter.elf C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 30 2026 17:01:11[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08e80h ( 36480) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=00018ea8 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001b8dc vaddr=40080000 size=0473ch ( 18236) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0dcc0h ( 56512) map[0m
+[0;32mI (132) esp_image: segment 4: paddr=0002dce8 vaddr=4008473c size=06470h ( 25712) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=00034160 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (160) cpu_start: Multicore app[0m
+[0;32mI (169) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (171) app_init: Application information:[0m
+[0;32mI (175) app_init: Project name:     energy-meter[0m
+[0;32mI (179) app_init: App version:      41c069d-dirty[0m
+[0;32mI (183) app_init: Compile time:     Mar 30 2026 17:46:18[0m
+[0;32mI (188) app_init: ELF file SHA256:  1e50d6190...[0m
+[0;32mI (193) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (196) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (200) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (204) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (208) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (214) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (219) heap_init: At 3FFB33F8 len 0002CC08 (179 KiB): DRAM[0m
+[0;32mI (225) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (230) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (236) heap_init: At 4008ABAC len 00015454 (85 KiB): IRAM[0m
+[0;33mW (242) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (257) spi_flash: flash io: dio[0m
+[0;33mW (260) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) MAIN: === Smart Energy Monitor Starting ===[0m
+[0;32mI (284) ADC_MONITOR: Initializing ADC...[0m
+[0;32mI (284) ADC_MONITOR: ADC initialized successfully[0m
+[0;32mI (284) MAIN: Starting ADC sampling...[0m
+[0;32mI (294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (1294) MAIN: Raw: 1746 | Voltage: 1407.03 mV[0m
+[0;32mI (2294) MAIN: Raw:   10 | Voltage: 8.06 mV[0m
+[0;32mI (3294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (4294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (5294) MAIN: Raw: 2298 | Voltage: 1851.87 mV[0m
+[0;32mI (6294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (7294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (8294) MAIN: Raw: 3570 | Voltage: 2876.92 mV[0m
+[0;32mI (9294) MAIN: Raw:  295 | Voltage: 237.73 mV[0m
+[0;32mI (10294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (11294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (12294) MAIN: Raw: 1867 | Voltage: 1504.54 mV[0m
+[0;32mI (13294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (14294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (15294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (16294) MAIN: Raw:  832 | Voltage: 670.48 mV[0m
+[0;32mI (17294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (18294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (19294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (20294) MAIN: Raw: 2442 | Voltage: 1967.91 mV[0m
+[0;32mI (21294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (22294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (23294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (24294) MAIN: Raw:  820 | Voltage: 660.81 mV[0m
+[0;32mI (25294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (26294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (27294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (28294) MAIN: Raw: 2512 | Voltage: 2024.32 mV[0m
+[0;32mI (29294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (30294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (31294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (32294) MAIN: Raw:  898 | Voltage: 723.66 mV[0m
+[0;32mI (33294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (34294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (35294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (36294) MAIN: Raw: 2202 | Voltage: 1774.51 mV[0m
+[0;32mI (37294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (38294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (39294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (40294) MAIN: Raw:  848 | Voltage: 683.37 mV[0m
+[0;32mI (41294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (42294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (43294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (44294) MAIN: Raw: 2391 | Voltage: 1926.81 mV[0m
+[0;32mI (45294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (46294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (47294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (48294) MAIN: Raw: 1090 | Voltage: 878.39 mV[0m
+[0;32mI (49294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (50294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (51294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (52294) MAIN: Raw: 1792 | Voltage: 1444.10 mV[0m
+[0;32mI (53294) MAIN: Raw: 4053 | Voltage: 3266.15 mV[0m
+[0;32mI (54294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (55294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (56294) MAIN: Raw: 1951 | Voltage: 1572.23 mV[0m
+[0;32mI (57294) MAIN: Raw:  298 | Voltage: 240.15 mV[0m
+[0;32mI (58294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (59294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (60294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (61294) MAIN: Raw: 2218 | Voltage: 1787.40 mV[0m
+[0;32mI (62294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (63294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (64294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (65294) MAIN: Raw: 2515 | Voltage: 2026.74 mV[0m
+[0;32mI (66294) MAIN: Raw:  725 | Voltage: 584.25 mV[0m
+[0;32mI (67294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (68294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (69294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (70294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (71294) MAIN: Raw: 1778 | Voltage: 1432.82 mV[0m
+[0;32mI (72294) MAIN: Raw: 3195 | Voltage: 2574.73 mV[0m
+[0;32mI (73294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (74294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (75294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (76294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (77294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (78294) MAIN: Raw: 1430 | Voltage: 1152.38 mV[0m
+[0;32mI (79294) MAIN: Raw:  500 | Voltage: 402.93 mV[0m
+[0;32mI (80294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (81294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (82294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (83294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (84294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (85294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (86294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (87294) MAIN: Raw: 1614 | Voltage: 1300.66 mV[0m
+[0;32mI (88294) MAIN: Raw: 2320 | Voltage: 1869.60 mV[0m
+[0;32mI (89294) MAIN: Raw: 3151 | Voltage: 2539.27 mV[0m
+[0;32mI (90294) MAIN: Raw: 4070 | Voltage: 3279.85 mV[0m
+[0;32mI (91294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (92294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (93294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (94294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (95294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (96294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (97294) MAIN: Raw: 4095 | Voltage: 3300.00 mV[0m
+[0;32mI (98294) MAIN: Raw: 2285 | Voltage: 1841.39 mV[0m
+[0;32mI (99294) MAIN: Raw: 1472 | Voltage: 1186.23 mV[0m
+[0;32mI (100294) MAIN: Raw:  926 | Voltage: 746.23 mV[0m
+[0;32mI (101294) MAIN: Raw:  320 | Voltage: 257.88 mV[0m
+[0;32mI (102294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (103294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m
+[0;32mI (104294) MAIN: Raw:    0 | Voltage: 0.00 mV[0m

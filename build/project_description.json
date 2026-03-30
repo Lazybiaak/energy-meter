@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "energy-meter",
-    "project_version":    "1",
+    "project_version":    "41c069d-dirty",
     "project_path":       "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter",
     "idf_path":           "C:/esp/v6.0/esp-idf",
     "build_dir":          "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build",
@@ -1735,7 +1735,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/main/energy-meter.c" ],
+            "sources": [ "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/main/adc_monitor.c", "C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/main/energy-meter.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

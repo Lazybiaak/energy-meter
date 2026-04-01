@@ -12,4 +12,10 @@ typedef struct {
 } power_t;
 
 power_t calculate_power(adc_sample_t sample, float ref_voltage);
+void power_calculation_init(void);
+void log_power(power_t power);
+power_t get_logged_power(uint16_t index);
+power_t max_power();
+power_t min_power();
+power_t average_power();
 #endif // POWER_CALCULATION_H

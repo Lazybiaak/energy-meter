@@ -1,1543 +1,0 @@
-Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp\v6.0\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\energy-meter.elf C:\Users\mansu\OneDrive\Documents\Projects\ESP_IDF\L02\energy-meter\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp\v6.0\esp-idf\tools\idf.py'
-ets Jul 29 2019 12:21:46
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0040,len:6272
-load:0x40078000,len:15848
-load:0x40080400,len:3920
-entry 0x40080644
-[0;32mI (27) boot: ESP-IDF v6.0 2nd stage bootloader[0m
-[0;32mI (27) boot: compile time Mar 30 2026 17:01:11[0m
-[0;32mI (28) boot: Multicore bootloader[0m
-[0;32mI (29) boot: chip revision: v3.1[0m
-[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (42) boot: Enabling RNG early entropy source...[0m
-[0;32mI (47) boot: Partition Table:[0m
-[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (75) boot: End of partition table[0m
-[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08e80h ( 36480) map[0m
-[0;32mI (99) esp_image: segment 1: paddr=00018ea8 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
-[0;32mI (103) esp_image: segment 2: paddr=0001b8dc vaddr=40080000 size=0473ch ( 18236) load[0m
-[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0dcb8h ( 56504) map[0m
-[0;32mI (132) esp_image: segment 4: paddr=0002dce0 vaddr=4008473c size=06470h ( 25712) load[0m
-[0;32mI (142) esp_image: segment 5: paddr=00034158 vaddr=50000000 size=00028h (    40) load[0m
-[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (148) boot: Disabling RNG early entropy source...[0m
-[0;32mI (160) cpu_start: Multicore app[0m
-[0;32mI (169) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
-[0;32mI (169) cpu_start: Pro cpu start user code[0m
-[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (171) app_init: Application information:[0m
-[0;32mI (175) app_init: Project name:     energy-meter[0m
-[0;32mI (179) app_init: App version:      1fdc1d1-dirty[0m
-[0;32mI (183) app_init: Compile time:     Mar 30 2026 22:32:26[0m
-[0;32mI (188) app_init: ELF file SHA256:  58cd05963...[0m
-[0;32mI (193) app_init: ESP-IDF:          v6.0[0m
-[0;32mI (196) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (200) efuse_init: Max chip rev:     v3.99 [0m
-[0;32mI (204) efuse_init: Chip rev:         v3.1[0m
-[0;32mI (208) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (214) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (219) heap_init: At 3FFB33F8 len 0002CC08 (179 KiB): DRAM[0m
-[0;32mI (225) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (230) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (236) heap_init: At 4008ABAC len 00015454 (85 KiB): IRAM[0m
-[0;33mW (242) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
-[0;32mI (254) spi_flash: detected chip: generic[0m
-[0;32mI (257) spi_flash: flash io: dio[0m
-[0;33mW (260) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (274) main_task: Started on CPU0[0m
-[0;32mI (284) main_task: Calling app_main()[0m
-[0;32mI (284) MAIN: === Smart Energy Monitor Starting ===[0m
-[0;32mI (284) ADC_MONITOR: Initializing ADC...[0m
-[0;32mI (284) ADC_MONITOR: ADC initialized successfully[0m
-[0;32mI (284) MAIN: Starting ADC sampling...[0m
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1377 | Voltage: 1109.67 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1181 | Voltage: 951.72 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1968 | Voltage: 1585.93 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2217 | Voltage: 1786.59 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2559 | Voltage: 2062.20 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2541 | Voltage: 2047.69 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4031 | Voltage: 3248.42 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  445 | Voltage: 358.61 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  176 | Voltage: 141.83 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3344 | Voltage: 2694.80 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2542 | Voltage: 2048.50 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  885 | Voltage: 713.19 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2085 | Voltage: 1680.22 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1156 | Voltage: 931.58 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1939 | Voltage: 1562.56 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1558 | Voltage: 1255.53 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1531 | Voltage: 1233.77 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2198 | Voltage: 1771.28 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  695 | Voltage: 560.07 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3462 | Voltage: 2789.89 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3046 | Voltage: 2454.65 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  144 | Voltage: 116.04 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3193 | Voltage: 2573.11 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2890 | Voltage: 2328.94 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2000 | Voltage: 1611.72 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2307 | Voltage: 1859.12 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3087 | Voltage: 2487.69 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2816 | Voltage: 2269.30 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2921 | Voltage: 2353.92 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  383 | Voltage: 308.64 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2271 | Voltage: 1830.11 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  170 | Voltage: 137.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2586 | Voltage: 2083.96 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1358 | Voltage: 1094.36 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2100 | Voltage: 1692.31 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1023 | Voltage: 824.40 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2529 | Voltage: 2038.02 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  582 | Voltage: 469.01 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2789 | Voltage: 2247.55 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  933 | Voltage: 751.87 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1833 | Voltage: 1477.14 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1997 | Voltage: 1609.30 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  413 | Voltage: 332.82 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3601 | Voltage: 2901.90 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4077 | Voltage: 3285.49 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:   11 | Voltage: 8.86 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3391 | Voltage: 2732.67 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  474 | Voltage: 381.98 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2289 | Voltage: 1844.62 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1805 | Voltage: 1454.58 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  248 | Voltage: 199.85 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1921 | Voltage: 1548.06 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2371 | Voltage: 1910.70 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:   14 | Voltage: 11.28 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2527 | Voltage: 2036.41 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  862 | Voltage: 694.65 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3851 | Voltage: 3103.37 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:   58 | Voltage: 46.74 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3454 | Voltage: 2783.44 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  257 | Voltage: 207.11 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3237 | Voltage: 2608.57 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  177 | Voltage: 142.64 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3757 | Voltage: 3027.62 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3678 | Voltage: 2963.96 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  879 | Voltage: 708.35 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1521 | Voltage: 1225.71 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2281 | Voltage: 1838.17 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  731 | Voltage: 589.08 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2741 | Voltage: 2208.86 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  578 | Voltage: 465.79 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2771 | Voltage: 2233.04 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  592 | Voltage: 477.07 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2986 | Voltage: 2406.30 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  336 | Voltage: 270.77 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3549 | Voltage: 2860.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1504 | Voltage: 1212.01 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4053 | Voltage: 3266.15 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  591 | Voltage: 476.26 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  149 | Voltage: 120.07 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2038 | Voltage: 1642.34 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2495 | Voltage: 2010.62 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3056 | Voltage: 2462.71 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3897 | Voltage: 3140.44 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3239 | Voltage: 2610.18 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2769 | Voltage: 2231.43 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1787 | Voltage: 1440.07 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  242 | Voltage: 195.02 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  249 | Voltage: 200.66 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1330 | Voltage: 1071.79 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2743 | Voltage: 2210.48 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3850 | Voltage: 3102.56 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2938 | Voltage: 2367.62 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2555 | Voltage: 2058.97 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3327 | Voltage: 2681.10 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2907 | Voltage: 2342.64 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1067 | Voltage: 859.85 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3822 | Voltage: 3080.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  245 | Voltage: 197.44 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2668 | Voltage: 2150.04 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1023 | Voltage: 824.40 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1893 | Voltage: 1525.49 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1520 | Voltage: 1224.91 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2755 | Voltage: 2220.15 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:   65 | Voltage: 52.38 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  240 | Voltage: 193.41 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  739 | Voltage: 595.53 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3556 | Voltage: 2865.64 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  457 | Voltage: 368.28 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  735 | Voltage: 592.31 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3186 | Voltage: 2567.47 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:   75 | Voltage: 60.44 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3201 | Voltage: 2579.56 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  806 | Voltage: 649.52 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2783 | Voltage: 2242.71 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  558 | Voltage: 449.67 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2406 | Voltage: 1938.90 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1726 | Voltage: 1390.92 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1145 | Voltage: 922.71 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1040 | Voltage: 838.10 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:   33 | Voltage: 26.59 mV
-Raw: 3798 | Voltage: 3060.66 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2966 | Voltage: 2390.18 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  652 | Voltage: 525.42 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2559 | Voltage: 2062.20 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3151 | Voltage: 2539.27 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  948 | Voltage: 763.96 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  429 | Voltage: 345.71 mV
-Raw: 4059 | Voltage: 3270.99 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2935 | Voltage: 2365.20 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  287 | Voltage: 231.28 mV
-Raw: 3741 | Voltage: 3014.73 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1600 | Voltage: 1289.38 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1904 | Voltage: 1534.36 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3529 | Voltage: 2843.88 mV
-Raw:   23 | Voltage: 18.53 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  194 | Voltage: 156.34 mV
-Raw: 3250 | Voltage: 2619.05 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3249 | Voltage: 2618.24 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  119 | Voltage: 95.90 mV
-Raw: 3010 | Voltage: 2425.64 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3566 | Voltage: 2873.70 mV
-Raw:  242 | Voltage: 195.02 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2159 | Voltage: 1739.85 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1477 | Voltage: 1190.26 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  848 | Voltage: 683.37 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2786 | Voltage: 2245.13 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    7 | Voltage: 5.64 mV
-Raw: 2225 | Voltage: 1793.04 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2399 | Voltage: 1933.26 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1093 | Voltage: 880.81 mV
-Raw: 3250 | Voltage: 2619.05 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2599 | Voltage: 2094.43 mV
-Raw:  685 | Voltage: 552.01 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  228 | Voltage: 183.74 mV
-Raw:  757 | Voltage: 610.04 mV
-Raw: 1491 | Voltage: 1201.54 mV
-Raw: 2317 | Voltage: 1867.18 mV
-Raw: 3041 | Voltage: 2450.62 mV
-Raw: 4059 | Voltage: 3270.99 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3291 | Voltage: 2652.09 mV
-Raw: 2350 | Voltage: 1893.77 mV
-Raw: 1168 | Voltage: 941.25 mV
-Raw:    1 | Voltage: 0.81 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  403 | Voltage: 324.76 mV
-Raw: 1237 | Voltage: 996.85 mV
-Raw: 2270 | Voltage: 1829.30 mV
-Raw: 3578 | Voltage: 2883.37 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3641 | Voltage: 2934.14 mV
-Raw: 2534 | Voltage: 2042.05 mV
-Raw: 1023 | Voltage: 824.40 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1069 | Voltage: 861.47 mV
-Raw: 2931 | Voltage: 2361.98 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3494 | Voltage: 2815.68 mV
-Raw: 1425 | Voltage: 1148.35 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  854 | Voltage: 688.21 mV
-Raw: 3019 | Voltage: 2432.89 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2289 | Voltage: 1844.62 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1454 | Voltage: 1171.72 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  999 | Voltage: 805.05 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  592 | Voltage: 477.07 mV
-Raw: 3789 | Voltage: 3053.41 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3468 | Voltage: 2794.73 mV
-Raw:  295 | Voltage: 237.73 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1393 | Voltage: 1122.56 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3696 | Voltage: 2978.46 mV
-Raw:  735 | Voltage: 592.31 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1233 | Voltage: 993.63 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2408 | Voltage: 1940.51 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  995 | Voltage: 801.83 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3938 | Voltage: 3173.48 mV
-Raw: 1713 | Voltage: 1380.44 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1370 | Voltage: 1104.03 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3938 | Voltage: 3173.48 mV
-Raw: 1646 | Voltage: 1326.45 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  561 | Voltage: 452.09 mV
-Raw: 3409 | Voltage: 2747.18 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2512 | Voltage: 2024.32 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  234 | Voltage: 188.57 mV
-Raw: 2384 | Voltage: 1921.17 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2471 | Voltage: 1991.28 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  398 | Voltage: 320.73 mV
-Raw: 3265 | Voltage: 2631.14 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3865 | Voltage: 3114.65 mV
-Raw:  918 | Voltage: 739.78 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  442 | Voltage: 356.19 mV
-Raw: 3376 | Voltage: 2720.59 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2425 | Voltage: 1954.21 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  947 | Voltage: 763.15 mV
-Raw: 3966 | Voltage: 3196.04 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 2559 | Voltage: 2062.20 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:   59 | Voltage: 47.55 mV
-Raw: 2854 | Voltage: 2299.93 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3369 | Voltage: 2714.95 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  639 | Voltage: 514.95 mV
-Raw: 3728 | Voltage: 3004.25 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3152 | Voltage: 2540.07 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
- pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p  pp��|�|��� ����pp�pp�pp�|�| p|��|p ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:ets Jul 29 2019 12:21:46
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0040,len:6272
-load:0x40078000,len:15848
-load:0x40080400,len:3920
-entry 0x40080644
-[0;32mI (27) boot: ESP-IDF v6.0 2nd stage bootloader[0m
-[0;32mI (27) boot: compile time Mar 30 2026 17:01:11[0m
-[0;32mI (28) boot: Multicore bootloader[0m
-[0;32mI (29) boot: chip revision: v3.1[0m
-[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (42) boot: Enabling RNG early entropy source...[0m
-[0;32mI (47) boot: Partition Table:[0m
-[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (75) boot: End of partition table[0m
-[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08e80h ( 36480) map[0m
-[0;32mI (99) esp_image: segment 1: paddr=00018ea8 vaddr=3ffb0000 size=02a2ch ( 10796) load[0m
-[0;32mI (103) esp_image: segment 2: paddr=0001b8dc vaddr=40080000 size=0473ch ( 18236) load[0m
-[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0dcb8h ( 56504) map[0m
-[0;32mI (132) esp_image: segment 4: paddr=0002dce0 vaddr=4008473c size=06470h ( 25712) load[0m
-[0;32mI (142) esp_image: segment 5: paddr=00034158 vaddr=50000000 size=00028h (    40) load[0m
-[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (148) boot: Disabling RNG early entropy source...[0m
-[0;32mI (160) cpu_start: Multicore app[0m
-[0;32mI (169) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
-[0;32mI (169) cpu_start: Pro cpu start user code[0m
-[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (171) app_init: Application information:[0m
-[0;32mI (175) app_init: Project name:     energy-meter[0m
-[0;32mI (179) app_init: App version:      1fdc1d1-dirty[0m
-[0;32mI (183) app_init: Compile time:     Mar 30 2026 22:32:26[0m
-[0;32mI (188) app_init: ELF file SHA256:  58cd05963...[0m
-[0;32mI (193) app_init: ESP-IDF:          v6.0[0m
-[0;32mI (196) efuse_init: Min chip rev:     v0.0[0m
-[0;32mI (200) efuse_init: Max chip rev:     v3.99 [0m
-[0;32mI (204) efuse_init: Chip rev:         v3.1[0m
-[0;32mI (208) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (214) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (219) heap_init: At 3FFB33F8 len 0002CC08 (179 KiB): DRAM[0m
-[0;32mI (225) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (230) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (236) heap_init: At 4008ABAC len 00015454 (85 KiB): IRAM[0m
-[0;33mW (242) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
-[0;32mI (254) spi_flash: detected chip: generic[0m
-[0;32mI (257) spi_flash: flash io: dio[0m
-[0;33mW (260) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (274) main_task: Started on CPU0[0m
-[0;32mI (284) main_task: Calling app_main()[0m
-[0;32mI (284) MAIN: === Smart Energy Monitor Starting ===[0m
-[0;32mI (284) ADC_MONITOR: Initializing ADC...[0m
-[0;32mI (284) ADC_MONITOR: ADC initialized successfully[0m
-[0;32mI (284) MAIN: Starting ADC sampling...[0m
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1155 | Voltage: 930.77 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 1749 | Voltage: 1409.45 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1346 | Voltage: 1084.69 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3242 | Voltage: 2612.60 mV
-Raw: 4095 | Voltage: 3300.00 mV
-����������������������������������������������������������������w: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-����������������������������������������������������������������aw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 3753 | Voltage: 3024.40 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  441 | Voltage: 355.38 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 1744 | Voltage: 1405.42 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2448 | Voltage: 1972.75 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  177 | Voltage: 142.64 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3236 | Voltage: 2607.77 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  417 | Voltage: 336.04 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 2922 | Voltage: 2354.73 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  190 | Voltage: 153.11 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 3254 | Voltage: 2622.27 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:  111 | Voltage: 89.45 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw: 4095 | Voltage: 3300.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-����������������������������������������������������������������w:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:  218 | Voltage: 175.68 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-����������������������������������������������������������������:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV
-Raw:    0 | Voltage: 0.00 mV

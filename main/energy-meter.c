@@ -18,9 +18,9 @@ void app_main(void) {
     
     while (1) {
         adc_sample_t sample = adc_read_sample();
-        power_t power = calculate_power(sample.voltage_mv, 3300.0f); // Using 3.3V as reference voltage 
-        printf("Raw: %4lu | Voltage: %.2f mV | Current: %.2f mA | Power: %.2f mW\n",
-                 sample.raw_adc, sample.voltage_mv, power.current, power.value);
+        power_t power = calculate_power(sample, 3300.0f); // Using 3.3V as reference voltage 
+        printf("Raw: %4lu | Voltage: %.2f mV | Current: %.2f mA | Power: %.2f W\n",
+                 sample.raw_adc, sample.voltage_mv, power.current, power.value/1000.0f);
         
         vTaskDelay(pdMS_TO_TICKS(1000));  // Read once per second
     }

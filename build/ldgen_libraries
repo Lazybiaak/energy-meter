@@ -195,5 +195,5 @@ C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-id
 C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/spiffs/libspiffs.a
 C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/main/libmain.a
 C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/adc_monitor/libadc_monitor.a
-C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/lcd_handle/liblcd_handle.a
+C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/power_calculation/libpower_calculation.a
 C:/Users/mansu/OneDrive/Documents/Projects/ESP_IDF/L02/energy-meter/build/esp-idf/sensor_read/libsensor_read.a

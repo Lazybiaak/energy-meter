@@ -4,6 +4,7 @@
 #include "esp_timer.h"
 #include "esp_log.h"
 #include "adc_monitor.h"
+#include "power_calculation.h"
 
 static const char *TAG = "MAIN";
 
@@ -17,8 +18,9 @@ void app_main(void) {
     
     while (1) {
         adc_sample_t sample = adc_read_sample();
-        printf("Raw: %4lu | Voltage: %.2f mV\n",
-                 sample.raw_adc, sample.voltage_mv);
+        power_t power = calculate_power(sample.voltage_mv, 3300.0f); // Using 3.3V as reference voltage 
+        printf("Raw: %4lu | Voltage: %.2f mV | Current: %.2f mA | Power: %.2f mW\n",
+                 sample.raw_adc, sample.voltage_mv, power.current, power.value);
         
         vTaskDelay(pdMS_TO_TICKS(1000));  // Read once per second
     }
